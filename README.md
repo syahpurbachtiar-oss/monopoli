@@ -25,13 +25,12 @@ Konfigurasi Firestore sudah tertanam di `index.html`, menggunakan proyek Firebas
 
 Room Monopoli memakai dokumen dengan prefix `MONO_` di koleksi Firestore `rooms`, sehingga terpisah dari room Gaple.
 
-## Publikasi GitHub Pages
+## Aktifkan GitHub Pages (sekali saja)
 
-Workflow otomatis tersedia di `.github/workflows/pages.yml`. Untuk aktivasi pertama:
-1. Buka **Settings → Pages** pada repository ini.
-2. Pada **Build and deployment → Source**, pilih **GitHub Actions**.
-3. Setelah disimpan, buka tab **Actions** dan lihat workflow **Deploy Kota Kita to GitHub Pages**.
-4. Deployment berikutnya berjalan otomatis setiap ada push ke `main`.
+1. Buka repository **Settings → Pages**.
+2. Pada **Build and deployment → Source**, pilih **Deploy from a branch**.
+3. Pilih branch `main` dan folder `/(root)`, lalu klik **Save**.
+4. Tunggu GitHub Pages selesai menerbitkan situs. Update berikutnya otomatis mengikuti commit di branch `main`.
 
 ## Catatan
 
