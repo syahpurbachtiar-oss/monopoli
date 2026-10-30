@@ -17,23 +17,22 @@ https://syahpurbachtiar-oss.github.io/monopoli/
 
 ## Online room
 
-Game memakai konfigurasi Firestore yang sudah tertanam di `index.html`, dengan proyek Firebase yang sama dengan game HAY Gaple. Pemain tidak perlu membuat proyek Firebase atau memasukkan konfigurasi.
+Konfigurasi Firestore sudah tertanam di `index.html`, menggunakan proyek Firebase yang sama dengan game HAY Gaple. Pemain tidak perlu membuat proyek Firebase, memasukkan API key, atau login.
 
-1. Host memilih nama lalu klik **Buat Room**.
-2. Bagikan kode room enam karakter.
-3. Teman memasukkan kode tersebut dan klik **Gabung**.
-4. Host memulai permainan setelah setidaknya dua pemain bergabung.
+1. Host klik **Buat Room** dan membagikan kode enam karakter.
+2. Teman memasukkan kode dan klik **Gabung**.
+3. Host klik **Mulai Permainan** setelah minimal dua pemain bergabung.
 
-Data Monopoli disimpan dalam dokumen Firestore dengan prefix `MONO_` pada koleksi `rooms`, agar terpisah dari room Gaple.
+Room Monopoli memakai dokumen dengan prefix `MONO_` di koleksi Firestore `rooms`, sehingga terpisah dari room Gaple.
 
-## GitHub Pages
+## Publikasi GitHub Pages
 
-Repository ini harus dipublikasikan melalui GitHub Pages dengan:
-- Branch: `main`
-- Folder: `/(root)`
-
-Di GitHub buka **Settings → Pages → Build and deployment → Deploy from a branch**, pilih `main` dan `/(root)`, lalu Save.
+Workflow otomatis tersedia di `.github/workflows/pages.yml`. Untuk aktivasi pertama:
+1. Buka **Settings → Pages** pada repository ini.
+2. Pada **Build and deployment → Source**, pilih **GitHub Actions**.
+3. Setelah disimpan, buka tab **Actions** dan lihat workflow **Deploy Kota Kita to GitHub Pages**.
+4. Deployment berikutnya berjalan otomatis setiap ada push ke `main`.
 
 ## Catatan
 
-Permainan online memakai Firestore client-side dan aturan keamanan Firestore dari proyek Firebase yang sudah digunakan HAY Gaple. Cocok untuk permainan santai bersama teman; bukan untuk kompetisi berhadiah atau transaksi uang asli.
+Permainan online memakai Firestore client-side dan aturan keamanan Firestore dari proyek Firebase yang digunakan HAY Gaple. Cocok untuk permainan santai bersama teman, bukan untuk kompetisi berhadiah atau transaksi uang asli.
